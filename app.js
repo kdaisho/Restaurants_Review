@@ -16,7 +16,7 @@ const errorHandlers = require('./handlers/errorHandlers');
 // create our Express app
 const app = express();
 
-// view engine setup
+// view engine setu
 app.set('views', path.join(__dirname, 'views')); // this is the folder where we keep our pug files
 app.set('view engine', 'pug'); // we use the engine pug, mustache or EJS work great too
 
@@ -57,7 +57,7 @@ app.use((req, res, next) => {
   res.locals.user = req.user || null;
   res.locals.currentPath = req.path;
   next();
-});
+})
 
 // promisify some callback based APIs
 app.use((req, res, next) => {
