@@ -1,5 +1,5 @@
 function autocomplete(input, latInput, lngInput) {
-    if (!input) reutrn; // Skip this fn from running if there is not input on the page
+    if (!input) return; // Skip this fn from running if there is not input on the page
     const dropdown = new google.maps.places.Autocomplete(input);
 
     dropdown.addListener('place_changed', () => {
@@ -12,7 +12,6 @@ function autocomplete(input, latInput, lngInput) {
     input.on('keydown', (event) => {
         if (event.keyCode === 13) event.preventDefault();
     });
-
 }
 
 export default autocomplete;
