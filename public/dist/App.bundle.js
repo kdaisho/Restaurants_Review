@@ -2825,6 +2825,13 @@ function ajaxHeart(event) {
     _axios2.default.post(this.action).then(function (res) {
         var isHearted = _this.heart.classList.toggle('heart__button--hearted');
         (0, _bling.$)('.heart-count').textContent = res.data.hearts.length;
+        if (isHearted) {
+            _this.heart.classList.add('heart__button--float');
+            var self = _this;
+            setTimeout(function () {
+                self.heart.classList.remove('heart__button--float');
+            }, 2500);
+        }
     }).catch(console.error);
 }
 
