@@ -73,7 +73,7 @@ exports.getStores = async (req, res) => {
         return;
     }
 
-    res.render('stores', { title: 'Stores' + page, stores: stores, page: page, pages: pages, count: count });
+    res.render('stores', { title: 'Stores', stores: stores, page: page, pages: pages, count: count });
 };
 
 const confirmOwener = (store, user) => {
